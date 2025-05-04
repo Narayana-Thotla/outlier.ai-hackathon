@@ -10,7 +10,7 @@ import { useStore } from "./../../zustand/zustand-store";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("delivery");
+  const [activeTab, setActiveTab] = useState("diningout");
   const currentTab = useStore((state) => state.currentTab);
   const updateTab = useStore((state) => state.updateTab);
 
@@ -77,12 +77,12 @@ export default function Header() {
           <div className="flex mt-4 border-b border-gray-200">
             <button
               onClick={() => {
-                setActiveTab("dining");
+                setActiveTab("diningout");
                 updateTab("diningout");
               }}
               className={cn(
                 "px-4 py-6 font-medium text-gray-600 border-b-2 transition-colors text-xl",
-                activeTab === "dining"
+                activeTab === "diningout"
                   ? "border-red-500 text-red-500"
                   : "border-transparent"
               )}
