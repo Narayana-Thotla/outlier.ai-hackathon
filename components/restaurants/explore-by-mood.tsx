@@ -116,7 +116,7 @@ export default function ExploreByMood({
           {collections.map((item: any) => (
             <div
               key={item.name}
-              className="flex flex-col items-center min-w-[260px]  md:min-w-[230px]"
+              className="flex flex-col items-center min-w-[260px]  md:min-w-[230px] cursor-pointer"
               onClick={(params) => {
                 updateCuisines(item.tags);
               }}
@@ -133,7 +133,7 @@ export default function ExploreByMood({
               </div>
               <p className="mt-2 text-center text-sm font-medium">
                 {item.moodType}
-                {console.log('mood tags:',item.tags)}
+                {/* {console.log('mood tags:',item.tags)} */}
               </p>
             </div>
           ))}
